@@ -1,0 +1,27 @@
+.logo {
+  font-family: var(--second-font);
+
+  @include font(26px, 700, 31px);
+  letter-spacing: 0.03em;
+  display: inline-block;
+  animation-duration: 2000ms;
+  animation-iteration-count: 2;
+}
+.logo__web {
+  font-family: var(--second-font);
+  @include font(26px, 700, 31px);
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+.logo--header {
+  color: var(--logo-color);
+
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.logo--footer {
+  color: var(--body-background-color);
+
+  margin-bottom: 20px;
+}

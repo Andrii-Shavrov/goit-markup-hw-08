@@ -1,0 +1,38 @@
+/*========clients================*/
+
+.clients-title {
+  @include font(36px, 700, 42px);
+
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--main-color-black);
+  margin-bottom: 50px;
+}
+.clients__logo {
+  display: block;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.clients__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+}
+
+/*========end clients=============*/
