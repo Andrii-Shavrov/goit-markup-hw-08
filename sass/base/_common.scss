@@ -29,6 +29,7 @@ img {
 .flex {
   display: flex;
 }
+
 body {
   @include font(14px, 400, 24px);
   font-family: var(--main-font);

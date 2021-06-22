@@ -16,12 +16,12 @@
 .logo--header {
   color: var(--logo-color);
 
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
-}
-.logo--footer {
-  color: var(--body-background-color);
+   padding-top: 16px;
+  padding-bottom: 16px;
 
-  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    margin-right: 93px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
 }

@@ -8,23 +8,37 @@
   border-bottom: 1px solid #ececec;
   background-color: var(--body-background-color);
 }
+.align-flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
 .header__nav {
   @extend %vertical-align;
   cursor: pointer;
 }
 .header__nav__list {
   @extend %vertical-align;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 .header-shadow {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.header__nav__item:not(:last-child) {
-  margin-right: 50px;
+.header__nav__item + .header__nav__item {
+  margin-left: 50px;
 }
 .header__list__item {
   padding-top: 32px;
   padding-bottom: 32px;
-  display: block;
+  display: inline-block;
   font-family: inherit;
 
   @include font(14px, 500, 16px);
@@ -42,14 +56,23 @@
   }
 }
 .header__contact {
-  margin-left: auto;
+   display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
-.header__contact__list + .header__contact__list {
-  margin-left: 50px;
-}
+
 .header__contact__item {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
   font-family: inherit;
 
@@ -66,6 +89,15 @@
   &:focus {
     color: var(--accent-color);
   }
+    @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contact__list + .header__contact__list {
+  margin-left: 50px;
+}
 }
 /* ====== icons contact========== */
 .header__icon__mail {
@@ -80,25 +112,49 @@
   fill: currentColor;
 }
 
-.align-item {
-  align-items: center;
-}
-
 .current {
   position: relative;
   color: var(--accent-color);
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    bottom: -1px;
-    left: 0px;
+  @media screen and (min-width: 768px) {
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      bottom: -1px;
+      left: 0px;
 
-    border-radius: 2px;
+      border-radius: 2px;
 
-    background-color: var(--accent-color);
+      background-color: var(--button-backgr-color);
+    }
   }
 }
+/*========================== menu modal ==========================*/
+.modal-menu__button {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .modal-menu__button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
 
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .modal-menu__button__modal-icon-open {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+    line-height: 0;
+  }
+  .modal-menu__button:hover,
+  .modal-menu__button:focus {
+    color: var(--accent-color);
+  }
+}
 /*==========end header=========*/

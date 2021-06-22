@@ -1,9 +1,19 @@
 /*=====footer social container=====*/
 .footer-social {
-  margin-left: 73px;
+  text-align: center;
+  margin-bottom: 60px;
   fill: var(--body-background-color);
   &__list li:not(:last-child) {
     margin-right: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+    width: 260px;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+    margin-left: auto;
+    width: auto;
   }
 }
 .footer-social__list li {

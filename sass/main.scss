@@ -8,15 +8,15 @@
 // BASE
 @import './base/common';
 @import './base/section';
-@import './base/contanier';
+@import './base/container';
 
 // COMPONENTS
-@import './components/modal-btn';
 @import './components/backdrop';
 @import './components/modal-window';
 @import './components/modal-form';
 @import './components/custom-checkbox';
 @import './components/modal-send-button';
+@import './components/menu-modal';
 @import './components/logo';
 @import './components/filter-list';
 // LAYOUT
@@ -28,5 +28,4 @@
 @import './layout/clients';
 @import './layout/footer';
 @import './layout/footer-social';
-@import './layout/footer-subscribe';
 @import './layout/team';
