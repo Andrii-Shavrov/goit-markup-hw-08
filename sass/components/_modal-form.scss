@@ -3,20 +3,88 @@
   padding: 40px;
   display: flex;
   flex-direction: column;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.15;
   letter-spacing: 0.01em;
 
   color: var(--main-color-black);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .modal-form-head {
-  @include font(20px, 700, 23px);
-
-  letter-spacing: 0.03em;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.15;
   text-align: center;
+  letter-spacing: 0.03em;
+
   color: var(--main-color-black);
   margin-bottom: 12px;
+  @media screen and (min-width: 480px) {
+    font-size: 20px;
+  }
 }
+/*=======modal-rotation=========*/
+@media screen and (min-width: 568px) and (max-width: 823px) and (max-height: 414px) {
+  .modal-form {
+    padding: 20px;
+  }
+  .modal-form-head {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .modal-rotation {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .modal-rotation-main {
+    margin-right: 10px;
+    width: 55%;
+  }
+  .modal-rotation-textarea {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: flex-start;
+  }
+  .modal-form-field {
+    display: none;
+    margin-bottom: 0px;
+  }
+
+  .modal-input-form::placeholder {
+    visibility: visible;
+    opacity: 1;
+    font-size: 10px;
+    line-height: 1.16;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  .modal-input-textarea {
+    height: 138px;
+    margin-bottom: 0;
+  }
+  .modal-input-textarea::placeholder {
+    font-size: 10px;
+  }
+}
+.private-policy {
+  justify-content: center;
+}
+.modal-send-button {
+  padding: 0px 40px !important;
+}
+
+/*=======end modal-rotation=========*/
+
 .modal-form-field {
   font-size: 12px;
   line-height: 1.15;
@@ -49,6 +117,8 @@
     margin-bottom: 20px;
   }
   &::placeholder {
+    visibility: hidden;
+    opacity: 0;
     font-size: 14px;
     line-height: 1.15;
     letter-spacing: 0.01em;
@@ -59,7 +129,9 @@
     border-color: var(--accent-color);
   }
 }
-
+.modal-input-form:focus + .modal-icon-form {
+  fill: var(--accent-color);
+}
 .modal-icon-form {
   position: absolute;
   width: 18px;

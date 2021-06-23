@@ -496,30 +496,36 @@
             </button>
             <form action="#" class="modal-form">
                 <p class="modal-form-head">Оставьте свои данные, мы вам перезвоним</p>
+        <div class="modal-rotation">
+            <div class="modal-rotation-main">
                 <label for="name" class="modal-form-field">Имя</label>
                 <div class="modal-form-input-wrapper">
-                    <input id="name" class="modal-input-form" type="text" name="user-name" required>
+                    <input id="name" class="modal-input-form" type="text" name="user-name" placeholder="Имя" required>
                     <svg class="modal-icon-form person">
                         <use href="./images/sprite.svg#icon-person-modal"></use>
                     </svg>
                 </div>
                 <label for="tell" class="modal-form-field">Телефон</label>
                 <div class="modal-form-input-wrapper">
-                    <input id="tell" class="modal-input-form" type="tel" name="user-phone" required>
+                    <input id="tell" class="modal-input-form" type="tel" name="user-phone" placeholder="Телефон" required>
                     <svg class="modal-icon-form phone">
                         <use href="./images/sprite.svg#icon-phone-modal"></use>
                     </svg>
                 </div>
                 <label for="email" class="modal-form-field">Почта</label>
                 <div class="modal-form-input-wrapper">
-                    <input id="email" class="modal-input-form" type="email" name="user-email" required>
+                    <input id="email" class="modal-input-form" type="email" name="user-email" placeholder="Почта" required>
                     <svg class="modal-icon-form email">
                         <use href="./images/sprite.svg#icon-email-modal"></use>
                     </svg>
                 </div>
-                <label for="area" class="label-text">Комментарий</label>
-                <textarea id="area" class="modal-input-textarea" name="user-comment"
-                    placeholder="Введите текст"></textarea>
+            </div>
+                <div class="modal-rotation-textarea">
+                    <label for="area" class="modal-form-field">Комментарий</label>
+                    <textarea id="area" class="modal-input-textarea" name="user-comment"
+                        placeholder="Введите текст"></textarea>
+                </div>
+        </div>
                 <div class="private-policy">
                     <input id="checkbox" class="custom-checkbox" type="checkbox" name="private" required>
                     <label for="checkbox">
