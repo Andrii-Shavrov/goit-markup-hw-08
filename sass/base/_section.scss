@@ -2,12 +2,16 @@
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
 .pictures-company {
-  padding-top: 94px;
+  padding-top: 47px;
   padding-bottom: 94px;
-  text-align: center;
+
+  display: none;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
+
 .skills-company {
   padding-top: 94px;
   padding-bottom: 47px;
@@ -19,19 +23,13 @@
 }
 .team-company {
   text-align: center;
-  padding-top: 47px;
+  padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--background-color);
-
-  @media screen and (max-width: 1199px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
 }
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
-
 }
 
 .footer {

@@ -102,9 +102,15 @@ body {
 }
 
 .pictures-company {
-  padding-top: 94px;
+  padding-top: 47px;
   padding-bottom: 94px;
-  text-align: center;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .pictures-company {
+    display: block;
+  }
 }
 
 .skills-company {
@@ -121,16 +127,9 @@ body {
 
 .team-company {
   text-align: center;
-  padding-top: 47px;
+  padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--background-color);
-}
-
-@media screen and (max-width: 1199px) {
-  .team-company {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
 }
 
 .clients {
@@ -1232,6 +1231,12 @@ body {
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: 1200px) {
+  .pictures-title {
+    font-size: 36px;
+  }
+}
+
 .pictures__list {
   flex-basis: calc((100% - 90px) / 3);
   display: flex;
@@ -1267,7 +1272,7 @@ body {
   color: var(--body-background-color);
 }
 
-/*=====end pictures============*/
+/*===== end pictures============*/
 /*========clients================*/
 .clients-title {
   font-size: 36px;
@@ -1279,29 +1284,58 @@ body {
   margin-bottom: 50px;
 }
 
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
 .clients__logo {
   display: block;
+  margin-top: 30px;
+  margin-left: 30px;
+  width: calc((100% - 60px) / 2);
 }
 
-.clients__logo:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .clients__logo {
+    width: calc((100% - 90px) / 3);
+  }
 }
 
-.clients__logo {
+@media screen and (min-width: 1200px) {
+  .clients__logo {
+    width: 170px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  .clients__logo:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.clients__logo__icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  min-height: 92px;
   fill: #afb1b8;
   transition-property: fill, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients__logo:focus, .clients__logo:hover {
+.clients__logo__icon:hover, .clients__logo__icon:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -1601,19 +1635,58 @@ body {
 /*=====end footer social container=====*/
 /*=========team-company================*/
 .team__list {
+  display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-left: -30px;
-  margin-top: -30px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .team__list {
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__list {
+    margin-top: -30px;
+    margin-left: -30px;
+  }
 }
 
 .team__list__item {
-  width: calc((100% - 120px) / 4);
-  margin-left: 30px;
-  margin-top: 30px;
+  width: 100%;
+  max-width: 450px;
   background: var(--body-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team__list__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .team__list__item {
+    width: calc((100% - 60px) / 2);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__list__item {
+    width: calc((100% - 120px) / 4);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+
+.team__list__img {
+  width: 100%;
+  max-width: 450px;
+  max-height: 100%;
 }
 
 .team-title {
@@ -1626,6 +1699,12 @@ body {
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: 1200px) {
+  .team-title {
+    font-size: 36px;
+  }
+}
+
 .team__name {
   font-family: inherit;
   font-size: 16px;
@@ -1633,11 +1712,13 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--main-color-black);
+  text-align: center;
+  display: block;
   margin-bottom: 10px;
 }
 
 .team__content {
-  padding: 30px;
+  padding: 30px 32px;
 }
 
 .team__position {
@@ -1652,19 +1733,20 @@ body {
 }
 
 .team__social-list {
+  display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.team__social-list li {
+.team__social-list__item {
   border-radius: 50%;
 }
 
-.team__social-list li:not(:last-child) {
+.team__social-list__item:not(:last-child) {
   margin-right: 10px;
 }
 
 .team__social-list__item__link {
+  display: flex;
   justify-content: center;
   border-radius: 50%;
   width: 44px;

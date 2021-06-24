@@ -1,12 +1,16 @@
 /*========pictures=============*/
-
 .pictures-title {
   @include font(36px, 700, 42px);
 
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-color-black);
+
   margin-bottom: 50px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
 }
 .pictures__list {
   flex-basis: calc((100% - 90px) / 3);
@@ -40,5 +44,4 @@
   text-transform: uppercase;
   color: var(--body-background-color);
 }
-
-/*=====end pictures============*/
+/*===== end pictures============*/
