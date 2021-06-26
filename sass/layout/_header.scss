@@ -1,5 +1,6 @@
 /*========= header ======================*/
 .header {
+  /* фиксированый хедер с тенью*/
   position: sticky;
   top: 0;
   z-index: 1;
@@ -7,11 +8,12 @@
 
   border-bottom: 1px solid #ececec;
   background-color: var(--body-background-color);
+  /*end фиксированый хедер с тенью*/
 }
 .align-flex-center {
-  display: flex;
+  // _placeholders.scss
+  @extend %vertical-align;
   justify-content: space-between;
-  align-items: center;
 }
 .header__nav {
   @media screen and (min-width: 768px) {
@@ -23,7 +25,8 @@
   cursor: pointer;
 }
 .header__nav__list {
-  @extend %vertical-align;
+  display: flex;
+  align-items: center;
   display: none;
   @media screen and (min-width: 768px) {
     display: flex;
@@ -39,7 +42,6 @@
   padding-top: 32px;
   padding-bottom: 32px;
   display: inline-block;
-  font-family: inherit;
 
   @include font(14px, 500, 16px);
 
@@ -56,7 +58,7 @@
   }
 }
 .header__contact {
-   display: none;
+  display: none;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -74,8 +76,6 @@
   padding-top: 5px;
   padding-bottom: 5px;
 
-  font-family: inherit;
-
   @include font(14px, 500, 16px);
 
   letter-spacing: 0.02em;
@@ -89,15 +89,15 @@
   &:focus {
     color: var(--accent-color);
   }
-    @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     padding-top: 32px;
     padding-bottom: 32px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header__contact__list + .header__contact__list {
-  margin-left: 50px;
-}
+    margin-left: 50px;
+  }
 }
 /* ====== icons contact========== */
 .header__icon__mail {

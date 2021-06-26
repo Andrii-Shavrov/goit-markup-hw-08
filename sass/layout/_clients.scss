@@ -44,10 +44,9 @@
   }
 }
 .clients__logo__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %vertical-align;
 
+  justify-content: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   min-height: 92px;

@@ -45,7 +45,6 @@
   max-height: 100%;
 }
 .team-title {
-  font-family: inherit;
   @include font(36px, 700, 42px);
   letter-spacing: 0.03em;
   color: var(--main-color-black);
@@ -57,7 +56,6 @@
   }
 }
 .team__name {
-  font-family: inherit;
   @include font(16px, 500, 19px);
   letter-spacing: 0.03em;
   color: var(--main-color-black);
@@ -70,7 +68,6 @@
   padding: 30px 32px;
 }
 .team__position {
-  font-family: inherit;
   @include font(16px, 400, 19px);
   letter-spacing: 0.03em;
   color: var(--text-color);
@@ -92,7 +89,7 @@
 
 .team__social-list__item__link {
   @extend %vertical-align;
-  display: flex;
+
   justify-content: center;
   border-radius: 50%;
   width: 44px;

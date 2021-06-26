@@ -47,10 +47,12 @@
   }
   .modal-rotation-textarea {
     width: 45%;
+
     display: flex;
+    align-items: center;
+
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: flex-end;
     align-content: flex-start;
   }
@@ -80,7 +82,7 @@
   justify-content: center;
 }
 .modal-send-button {
-  padding: 0px 40px !important;
+  padding: 0px 40px;
 }
 
 /*=======end modal-rotation=========*/
