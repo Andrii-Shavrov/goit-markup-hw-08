@@ -803,6 +803,7 @@ body {
   width: 100%;
   border-bottom: 1px solid #ececec;
   background-color: var(--body-background-color);
+  /*end фиксированый хедер с тенью*/
 }
 
 .align-flex-center {
@@ -1118,7 +1119,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .projects__list {
-    width: 100%;
+    width: 480px;
   }
 }
 
@@ -1191,7 +1192,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .projects__list__item__image {
-    width: 100%;
+    width: 480px;
   }
 }
 
