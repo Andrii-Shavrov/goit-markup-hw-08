@@ -1152,6 +1152,12 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+@media screen and (min-width: 480px) {
+  .projects__list__item {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .projects__list__item {
     width: calc((768px - 60px) / 2);
@@ -1174,9 +1180,21 @@ body {
   border-left: 1px solid #eeeeee;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 480px) {
   .projects__list__item__card-title {
-    min-height: 146px;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects__list__item__card-title {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects__list__item__card-title {
+    width: 370px;
   }
 }
 
